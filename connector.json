@@ -1,0 +1,17 @@
+{
+  "name": "postgres-engagement-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "admin",
+    "database.password": "admin",
+    "database.dbname": "streaming_db",
+    "database.server.name": "streaming",
+    "topic.prefix": "streaming",
+    "table.include.list": "public.engagement_events",
+    "plugin.name": "pgoutput",
+    "slot.name": "engagement_slot",
+    "publication.autocreate.mode": "filtered"
+  }
+}
